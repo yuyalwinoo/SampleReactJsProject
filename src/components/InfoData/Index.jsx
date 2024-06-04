@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import Register from './Register'
+import Register from '../useRef/useRef'
 import List from './List'
 
 const Index = () => {
@@ -12,6 +12,7 @@ const Index = () => {
     }
     return (
         <div className='wrapper'>
+            {/* <Register registerInfo={registerInfo}/> */}
             <Register registerInfo={registerInfo}/>
             <List info={info}/>
         </div>
