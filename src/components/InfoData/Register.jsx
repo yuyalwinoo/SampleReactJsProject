@@ -1,26 +1,28 @@
-import { useState } from "react"
+import { useRef } from "react"
 
 const Register = ({registerInfo}) => {
-    const [newData,SetNewData] = useState({
-        name:'',
-        email:'',
-        address:''
-    });
+   
+    const nameRef = useRef();
+    const emailRef = useRef();
+    const addressRef = useRef();
 
     const addNewData = (e) => {
         e.preventDefault();
-        if(newData.name.trim() === '' || newData.email.trim() === '' || newData.address.trim() === '')
+        if(nameRef.current.value.trim() === '' || emailRef.current.value.trim() === '' || addressRef.current.value.trim() === '')
         {
             alert('Please enter a valid value!!!');
             return;
         }
+        const newData = {
+            name : nameRef.current.value,
+            email : emailRef.current.value,
+            address : addressRef.current.value
+        }
         registerInfo(newData);
         
-        SetNewData({
-            name:'',
-            email:'',
-            address:''
-        });
+        nameRef.current.value = "";
+        emailRef.current.value = "";
+        addressRef.current.value = "";
 
     }
     return (
@@ -29,20 +31,17 @@ const Register = ({registerInfo}) => {
                 <div className="inputDiv">
                     <label>Name:</label>
                     <input type="text" 
-                            value={newData.name} 
-                            onChange={(e)=>SetNewData({...newData,name:e.target.value})}/>
+                            ref={nameRef}/>
                 </div>
                 <div className="inputDiv">
                     <label>Email:</label>
                     <input type="text" 
-                            value={newData.email} 
-                            onChange={(e)=>SetNewData({...newData,email:e.target.value})}/>
+                            ref={emailRef}/>
                 </div>
                 <div className="inputDiv">
                     <label>Address:</label>
                     <input type="text" 
-                            value={newData.address}
-                            onChange={(e)=>SetNewData({...newData,address:e.target.value})}/>
+                            ref={addressRef}/>
                 </div>
                 <div className="inputDiv">
                     <button type="submit" className="SubmitBtn">Register</button>
