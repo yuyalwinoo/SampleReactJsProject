@@ -10,6 +10,7 @@ const ToDoByID = () => {
         {
             setError(true);
             setId("");
+            setTodo(null);
             return;
         }    
         fetch(`https://jsonplaceholder.typicode.com/todos/${id}`)
