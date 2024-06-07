@@ -23,7 +23,7 @@ const ToDoByID = () => {
     return (
         <div>
             <form onSubmit={searchData}>
-                <input type="text" value={id} onChange={(e)=>setId(e.target.value)}/>
+                <input type="number" value={id} onChange={(e)=>setId(e.target.value)}/>
                 <button type="submit">Search</button>
             </form>
             <div>
