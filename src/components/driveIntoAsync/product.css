@@ -1,0 +1,19 @@
+.item-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: start;
+    justify-content: space-evenly;
+    margin: 50px auto;
+}
+.product-item {
+    width: 300px;
+}
+
+.product-item img{
+    width: 100%;
+}
+h1 {
+    text-align: center;
+}
+
