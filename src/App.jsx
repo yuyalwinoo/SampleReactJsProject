@@ -8,7 +8,9 @@ import ReduxIndex from "./components/redux/ReduxIndex"
 import AllToDos from "./components/useEffectAnduseReducer/allToDos/AllToDos"
 import Counter from "./components/useEffectAnduseReducer/counterApp/Counter"
 import ToDoByID from "./components/useEffectAnduseReducer/toDoByID/ToDoByID"
-import store from "./store/index"
+// import store from "./store/index"
+import ReduxToolkitCounter from "./components/reduxToolkit/ReduxToolkitCounter"
+import store from "./store/reduxToolkitIndex"
 
 function App() {
 
@@ -21,9 +23,15 @@ function App() {
       {/* <ToDoByID/> */}
       {/* <Toggle/> */}
       {/* <Product/> */}
-      <Provider store={store}>
+
+      {/* <Provider store={store}>
         <ReduxIndex/>
+      </Provider> */}
+       
+      <Provider store={store}>
+        <ReduxToolkitCounter/>
       </Provider>
+
     </>
   )
 }
