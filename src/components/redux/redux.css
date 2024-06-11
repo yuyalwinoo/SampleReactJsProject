@@ -15,6 +15,11 @@ section{
     align-items: center;
     margin: 30px auto;
 }
+@media only screen and (max-width: 1200px) {
+    .btn-div {
+        flex-direction: column;
+    }
+}
 
 .btn-div button {
    background: transparent;

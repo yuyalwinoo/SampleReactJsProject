@@ -1,13 +1,14 @@
 import '../redux/button.css'
 import '../redux/togglebtn.css'
 import '../redux/redux.css'
+import './reduxToolkit.css'
 import { useDispatch, useSelector } from 'react-redux';
-import {counterActions} from '../../store/reduxToolkitIndex'
+import {counterActions} from '../../store/counterReducer'
 
 const ReduxToolkitCounter = () => {
-    const counter = useSelector((state)=>state.counter);
+    const counter = useSelector((state)=>state.counter.counter);
     const dispatch = useDispatch();
-    const isShow = useSelector((state)=>state.isShow);
+    const isShow = useSelector((state)=>state.counter.isShow);
 
     const incHandler = () =>{
         dispatch(counterActions.increase())

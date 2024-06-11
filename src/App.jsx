@@ -9,7 +9,7 @@ import AllToDos from "./components/useEffectAnduseReducer/allToDos/AllToDos"
 import Counter from "./components/useEffectAnduseReducer/counterApp/Counter"
 import ToDoByID from "./components/useEffectAnduseReducer/toDoByID/ToDoByID"
 // import store from "./store/index"
-import ReduxToolkitCounter from "./components/reduxToolkit/ReduxToolkitCounter"
+import Appindex from "./components/reduxToolkit/Appindex"
 import store from "./store/reduxToolkitIndex"
 
 function App() {
@@ -29,7 +29,7 @@ function App() {
       </Provider> */}
        
       <Provider store={store}>
-        <ReduxToolkitCounter/>
+        <Appindex/>
       </Provider>
 
     </>
