@@ -11,6 +11,7 @@ import ToDoByID from "./components/useEffectAnduseReducer/toDoByID/ToDoByID"
 // import store from "./store/index"
 import Appindex from "./components/reduxToolkit/Appindex"
 import store from "./store/reduxToolkitIndex"
+import Todo from "./components/reduxToolkit/todo/Todo"
 
 function App() {
 
@@ -29,7 +30,8 @@ function App() {
       </Provider> */}
        
       <Provider store={store}>
-        <Appindex/>
+        {/* <Appindex/> */}
+        <Todo/>
       </Provider>
 
     </>
