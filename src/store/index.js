@@ -18,7 +18,7 @@ const counterReducer = (state = initialState, action) => {
     }
     if(action.type === 'increase5'){
         return {
-            ...state,counter : state.counter +5
+            ...state,counter : state.counter +action.amount
         }
     }
     if(action.type === 'toggle'){

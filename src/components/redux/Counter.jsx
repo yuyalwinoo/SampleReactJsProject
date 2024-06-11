@@ -12,7 +12,7 @@ const Counter = () => {
         dispatch({type:'increase'})
     }
     const inc5Handler = () =>{
-        dispatch({type:'increase5'})
+        dispatch({type:'increase5',amount:5})
     }
     const decHandler = () =>{
         dispatch({type:'decrease'})
