@@ -19,6 +19,7 @@ nav ul {
     border-radius: 8px;
     margin: 10px auto;
     background: #84fab0;
+    cursor: pointer;
 }
 .welcome {
     display: flex;

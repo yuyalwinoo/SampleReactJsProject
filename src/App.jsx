@@ -12,6 +12,7 @@ import ToDoByID from "./components/useEffectAnduseReducer/toDoByID/ToDoByID"
 import Appindex from "./components/reduxToolkit/Appindex"
 import store from "./store/reduxToolkitIndex"
 import Todo from "./components/reduxToolkit/todo/Todo"
+import ReactRouterDom from "./components/reactRouterDom/ReactRouterDom"
 
 function App() {
 
@@ -29,10 +30,12 @@ function App() {
         <ReduxIndex/>
       </Provider> */}
        
-      <Provider store={store}>
-        {/* <Appindex/> */}
+      {/* <Provider store={store}>
+        <Appindex/>
         <Todo/>
-      </Provider>
+      </Provider> */}
+
+      <ReactRouterDom/>
 
     </>
   )
